@@ -13,7 +13,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 400, height: 400)
 
 /*:
  ## Add your code below
@@ -23,9 +23,18 @@ let canvas = Canvas(width: 400, height: 300)
  Use whitespace and comments as appropriate.
  */
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
+canvas.drawAxes()
+canvas.defaultLineWidth = 5
+canvas.lineColor = Color.black
+canvas.drawLine(fromX: 0, fromY: 0, toX: 100, toY: 0)
 
+canvas.translate(byX: 100, byY: 0)
+canvas.rotate(by: 120)
+canvas.drawLine(fromX: 0, fromY: 0, toX: 100, toY: 0)
 
-
+canvas.translate (byX: 100, byY: 0)
+canvas.rotate(by: 120)
+canvas.drawLine(fromX: 0, fromY: 0, toX: 100, toY: 0)
 /*:
  ## Use source control
  To keep your work organized, and receive feedback, source control is a must.

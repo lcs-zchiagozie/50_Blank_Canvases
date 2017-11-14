@@ -24,6 +24,7 @@ let canvas = Canvas(width: 500, height: 500)
  */
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 canvas.drawAxes()
+canvas.drawShapesWithFill = false
 for x in stride(from: 25, through: 475, by: 50) {
     for y in stride(from: 475, through: 25, by: -50) {
         canvas.drawEllipse(centreX: x, centreY: y, width: 10, height: 10)
@@ -34,6 +35,9 @@ for x in stride(from: 25, through: 475, by: 50) {
 
 //RANdom
 random(from: 1, toButNotIncluding: 5)
+canvas.drawShapesWithFill
+
+
 /*:
  ## Use source control
  To keep your work organized, and receive feedback, source control is a must.
