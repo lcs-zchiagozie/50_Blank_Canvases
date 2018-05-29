@@ -23,8 +23,19 @@ let canvas = Canvas(width: 400, height: 300)
  Use whitespace and comments as appropriate.
  */
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
+func drawPolygon(withSides n : Double, sideLength l : Int, startX x : Int, StartY y : Int) {
+    canvas.translate(byX: x, byY: y)
 
-
+    let interior = (n - 2) * 180 / n
+    let exterior = 180 - interior
+    
+    for _ in 1...Int(n) {
+        canvas.drawLine(fromX: 0, fromY: 0, toX: l, toY: 0)
+    }
+    canvas.translate(byX: l, byY: 0)
+    canvas.rotate(by: Degrees(exterior))
+    canvas.translate(byX: -x, byY: -y)
+}
 
 /*:
  ## Use source control
